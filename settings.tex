@@ -1,0 +1,127 @@
+% ============= Document class & settings =============
+\documentclass[
+	a4paper, 
+	11pt, 
+	headlines=1.25, 
+	footlines=1.25, 
+	DIV = 12, 
+	numbers = noenddot,
+	]{scrreprt}
+\linespread{1}                			% Zeilenabstand
+
+\usepackage{geometry}%[margin=2.5cm]{geometry}	% Seitenränder über das geometry-Paket einstellen
+\geometry{										% unten 2 cm, sonst 2,5 cm
+    top=2cm,
+    bottom=2cm,
+    left=2cm,
+    right=2cm,
+    		%For printing outer=2cm, inner=3cm setzen
+    		%outer=2cm,
+    		%inner=3cm,
+}
+%	BCOR = 0mm, 
+%	titlepage=firstiscover, 
+%	listof=totoc,  
+%	bibliography=totoc					% Lines were in document class before
+
+% Dokumentinformationen
+\usepackage[
+	pdftitle={Bachelor's Thesis},
+	pdfsubject={Analysis of Droplets Size Distribution in an Aerated Stirred Tank Reactor},
+	pdfauthor={Felix Febrian},
+	pdfkeywords={},	
+	hidelinks %Links nicht einrahmen
+]{hyperref}
+
+% ============= Packages =============
+\usepackage[utf8]{inputenc}
+\usepackage{arev}
+\usepackage[T1]{fontenc}
+%\usepackage{lmodern}
+\usepackage[ngerman, english]{babel}		% Umlaute, usw.
+\usepackage{mathpazo}           			% Schriftart für Mathe
+\usepackage{microtype}          			% besserer Schriftsatz
+\usepackage{csquotes}           			% für Wörter in "[Text]": \enquote{}
+\usepackage{amssymb}            			% ermöglicht mathematische Symbole
+\usepackage{amsthm}             			% ermöglicht mathematische Umgebungen
+\usepackage{amsmath}            			% ""
+\usepackage{graphicx}           			% ermöglicht Einbinden von Grafiken
+	\graphicspath{{pictures/}}  			% sagt graphicx wo die Grafiken liegen
+\usepackage{tikz} 	        				% Zum Bild Ausrichten
+\usepackage{pxfonts}            			% für griechische Buchstaben
+\usepackage{scrdate}
+\usepackage{booktabs}           			% Für Tabellen-Linien
+\usepackage{xcolor}             			% Farbiger Text
+\usepackage{multirow}           			% bessere Tabellen
+\usepackage{pdflscape}          			% um Tabellen um 90 Grad zu drehen
+\usepackage{adjustbox}          			% Um Tabellen auf eine Seite zu beschränken
+\usepackage{todonotes}					    % Enables inserting notes on the Document
+\usepackage{xspace}						    % Paket für ein intelligenter Leerzeichen
+\usepackage{tabto}						    % Enable using tab in the line
+\usepackage[version=4]{mhchem}              % Enable writing chemical formula
+\usepackage{chemformula}                    % --"--
+\usepackage{chemfig}                        % To draw chemical molecules, especially organic molecules
+\usepackage{pdfpages}                       % Enables inserting pdf
+\usepackage{xfrac}                          % other fraction types
+\usepackage[Bjornstrup]{fncychap}           % Fancy Chapter Styles, Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+
+% ============= BibTex Options =============
+\usepackage[authoryear, round, sort]{natbib}		% Package for bibtex -- citation Test, et.al (2000)
+\usepackage{babelbib}					            % Package für die deutsche BibTeX-Umgebung ... (sonst kann man keine Auflage eines Buches angeben)
+\usepackage{tocbibind}					            % List Bibliography in the Table of Contents
+
+% ============= Packages with renewed command (MACRO) ================
+\usepackage[intoc]{nomencl}
+\makenomenclature
+\usepackage{etoolbox}
+    \renewcommand\nomgroup[1]{%
+        \item[\bfseries
+        \ifstrequal{#1}{L}{Latin Symbols}{%
+        \ifstrequal{#1}{G}{Greek Symbols}{%
+        \ifstrequal{#1}{N}{Non-Dimensional Numbers}{%
+        \ifstrequal{#1}{A}{Abbreviations}{}}}}%
+        ]}
+    \newcommand{\nomunit}[1]{%
+        \renewcommand{\nomentryend}{\dotfill{} #1}}
+
+
+\usepackage{enumitem}
+	\newcounter{inlineenum}                         % enumeration inside the text.
+	\renewcommand{\theinlineenum}{\alph{inlineenum}}
+	\newenvironment{inlineenum}
+  		{\unskip\ignorespaces\setcounter{inlineenum}{0}%
+   		\renewcommand{\item}{\refstepcounter{inlineenum}{\textit{\theinlineenum})~}}}
+  		{\ignorespacesafterend}
+  		
+\usepackage{pgfplots}
+  	\pgfplotsset{compat=newest}
+  	\usetikzlibrary{plotmarks}
+  	\usetikzlibrary{arrows.meta}
+  	\usepgfplotslibrary{patchplots}
+  	\usepackage{grffile}
+	\pgfplotsset{plot coordinates/math parser=false}
+\newlength\figH
+\newlength\figW
+\setlength{\figH}{10cm} % Hier kann die Größe der Plots gesetzt werden. default: 7 
+\setlength{\figW}{13.33333cm} % Breite = 4/3*Höhe. default: 9.33333
+
+% MAKRO pgfplot picture, #1 : .tex data, #2 : caption, #3 : Label
+\newcommand{\plot}[3]{
+    \begin{figure}[htb]
+        \centering
+        {\input{#1}}
+        %\vspace{0.1cm}
+        \caption{#2}
+        \label{#3}
+    \end{figure}}
+    
+% Inserting pdf as figure
+\newcommand{\vectorGraphic}[3]{
+    \begin{figure}[htb]
+        \centering
+        \includegraphics{#1}
+        \caption{#2}
+        \label{#3}
+    \end{figure}}
+    
+%\renewcommand\thechapter{Chapter \arabic{chapter}}   
