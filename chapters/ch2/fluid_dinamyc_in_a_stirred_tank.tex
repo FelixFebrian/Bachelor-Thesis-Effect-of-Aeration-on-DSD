@@ -5,8 +5,8 @@ The most commonly used method to determine fluid rheology is by means of \textsc
 \begin{align} \label{eq:reynoldGeneral}
     \text{Re} = \frac{w \cdot L_{\text{char}}}{\nu}.
 \end{align}
-Generally, the velocity of the stirrer blade tip $w_{\text{tip}}$ and stirrer diameter $d$ are used to calculate the \textsc{Reynolds}--Number in a stirred tank. \citet{Kraume2012} and \citet{Wollny2010Diss} stated, at $\text{Re} < 10$ the fluid-flow has its laminar form and becomes entirely turbulent for $\text{Re} > 10^4$. The difference between laminar and turbulent flow are illustrated in Figure \ref{fig:stirredTankLamTurb}. Laminar flows are distinguished in their harmonized movement. The velocity of each volume element forms a streamline throughout the whole vessel. Once Re exceeds its treshold ($\text{Re} > 10$), the turbulent eddy begins to form inside the vessel. This results in a chaotic oscillation of the velocity (see Figure \ref{plot:turbulentFlowVelocity}).
-\vectorGraphic{pictures/stirredTankLamTurb.pdf}{A sketch of a common stirred-tank with its charasteristic dimensions (left), schematic illustrations of laminar flow (middle) and turbulent flow (right)}{fig:stirredTankLamTurb}\\
+Generally, the velocity of the stirrer blade tip $w_{\text{tip}}$ and stirrer diameter $d$ are used to calculate the \textsc{Reynolds}--Number in a stirred tank. \citet{Kraume2012Transport} and \citet{Wollny2010Diss} stated, at $\text{Re} < 10$ the fluid-flow has its laminar form and becomes entirely turbulent for $\text{Re} > 10^4$. The difference between laminar and turbulent flow are illustrated in Figure \ref{fig:stirredTankLamTurb}. Laminar flows are distinguished in their harmonized movement. The velocity of each volume element forms a streamline throughout the whole vessel. Once Re exceeds its treshold ($\text{Re} > 10$), the turbulent eddy begins to form inside the vessel. This results in a chaotic oscillation of the velocity (see Figure \ref{plot:turbulentFlowVelocity}).
+\vectorGraphic{pictures/ch2/stirredTankLamTurb.pdf}{A sketch of a common stirred-tank with its charasteristic dimensions (left), schematic illustrations of laminar flow (middle) and turbulent flow (right)}{fig:stirredTankLamTurb}\\
 The stirrer \textsc{Reynolds}--Number is defined as:
 \begin{gather}
     \text{Re} = \frac{n \cdot d^2}{\nu} = \frac{n \cdot d^2 \cdot \rho}{\eta}.
@@ -15,10 +15,10 @@ Similar to the \textsc{Reynolds}--Number, the power input in a stirred vessel is
 \begin{gather}
     \text{Ne} = \frac{P}{\rho \cdot n^3 \cdot d^5} = \frac{2 \cdot \pi \cdot M_t}{\rho \cdot n^2 \cdot d^5}.
 \end{gather}
-According to \citet{Wollny2010Diss}, this \textsc{Newton}--Number is directly proportional to \textsc{Reynolds}--Number in laminar zone ($\text{Ne} \sim \text{Re}$), whereas such correlation between these two quantities is not to be found in turbulent zone ($\text{Ne} \neq f(\text{Re})$). 
+According to \citet{Wollny2010Diss}, this \textsc{Newton}--Number is directly proportional to \textsc{Reynolds}--Number in laminar zone ($\text{Ne} \sim \text{Re}$), whereas such correlation between these two quantities is not to be found in turbulent zone ($\text{Ne} \neq f(\text{Re})$).
 
 \paragraph{The Turbulent Velocity}
-The turbulent velocity inside an agitated vessel depends on time and position. The instantaneous velocity $w_i(\Vec{x},t)$ for a fixed volume element fluctuates around its average $\overline{w}_i(\Vec{x})$ over the course of time due to the turbulent eddy. This actual velocity can then be depicted as the sum of a mean velocity $\overline{w}_i(\Vec{x})$ and a turbulent fluctuation $w'(\Vec{x},t)$ as proposed by Reynold. The mean value is defined as:
+In fluid dynamics, turbulent flows are determined by its three-dimensional, localized and instationary eddies. The instantaneous velocity $w_i(\Vec{x},t)$ for a fixed volume element fluctuates around its average $\overline{w}_i(\Vec{x})$ over the course of time due to the turbulent eddy. This actual velocity can then be depicted as the sum of a mean velocity $\overline{w}_i(\Vec{x})$ and a turbulent fluctuation $w'(\Vec{x},t)$ as proposed by Reynold. The mean value is defined as:
 \begin{gather}
     \overline{w}_i \equiv \frac{1}{\tau} \cdot \int_0^\tau w(t) \, dt.
 \end{gather}
@@ -41,11 +41,13 @@ The characteristic quantities of turbulent flow, the average velocity $\overline
     w_\text{tip} = \pi{} \cdot n \cdot d \sim \overline{w} \sim w'.
 \end{gather}
 
-\plot{pictures/sec2_turbulent_flow.tex}{Schematic diagram of turbulent velocity for any volume element of the fluid}{plot:turbulentFlowVelocity}
-\plot{pictures/sec2_turbulent_flow_2.tex}{Schematic diagram of turbulent velocity for any volume element of the fluid for a stationary process (top) and non-stationary process (bottom)}{plot:turbulentFlowVelocity2}
+\plot{pictures/ch2/sec2_turbulent_flow.tex}{Schematic diagram of turbulent velocity for any volume element of the fluid}{plot:turbulentFlowVelocity}
+\plot{pictures/ch2/sec2_turbulent_flow_2.tex}{Schematic diagram of turbulent velocity for any volume element of the fluid for a stationary process (top) and non-stationary process (bottom)}{plot:turbulentFlowVelocity2}
 
 \subsection{Macro and Micro Turbulence}
+The rotating movement of the stirrer induce
 Biggest turbulent eddies: \citep{Wollny2010Diss}
 \begin{align}
-    \Lambda = \frac{h}{2} = \frac{d}{10}
+    \Lambda \sim \frac{h}{2} = \frac{d}{10}
 \end{align}
+\vectorGraphic{pictures/ch2/macroAndMicroEddy.pdf}{Size of turbulent eddies}{fig:macroAndMicroEddy}
