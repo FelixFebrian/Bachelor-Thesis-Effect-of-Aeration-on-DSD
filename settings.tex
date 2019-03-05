@@ -107,7 +107,7 @@
 
 % MAKRO pgfplot picture, #1 : .tex data, #2 : caption, #3 : Label
 \newcommand{\plot}[3]{
-    \begin{figure}[htb]
+    \begin{figure}[htbp]
         \centering
         {\input{#1}}
         %\vspace{0.1cm}
@@ -117,9 +117,9 @@
     
 % Inserting pdf as figure
 \newcommand{\vectorGraphic}[3]{
-    \begin{figure}[htb]
+    \begin{figure}[htbp]
         \centering
-        \includegraphics{#1}
+        \includegraphics[scale=1]{#1}
         \caption{#2}
         \label{#3}
     \end{figure}}
