@@ -49,13 +49,55 @@ The characteristic quantities of turbulent flow, the average velocity $\overline
     w_\text{tip} = \pi{} \cdot n \cdot d \sim \overline{w} \sim w'.
 \end{gather}
 
-\plot{pictures/ch2/sec2_turbulent_flow.tex}{Schematic diagram of turbulent velocity for any volume element of the fluid}{plot:turbulentFlowVelocity}
-\plot{pictures/ch2/sec2_turbulent_flow_2.tex}{Schematic diagram of turbulent velocity for any volume element of the fluid for a stationary process (top) and non-stationary process (bottom)}{plot:turbulentFlowVelocity2}
+%\plot{pictures/ch2/sec2_turbulent_flow.tex}{Schematic diagram of turbulent velocity for any volume element of the fluid}{plot:turbulentFlowVelocity}
+%\plot{pictures/ch2/sec2_turbulent_flow_2.tex}{Schematic diagram of turbulent velocity for any volume element of the fluid for a stationary process (top) and non-stationary process (bottom)}{plot:turbulentFlowVelocity2}
 
 \subsection{Macro and Micro Turbulence}
-The rotating movement of the stirrer induce
-Biggest turbulent eddies: \citep{Wollny2010Diss}
-\begin{align}
-    \Lambda \sim \frac{h}{2} = \frac{d}{10}
-\end{align}
 \vectorGraphic{pictures/ch2/macroAndMicroEddy.pdf}{Size of turbulent eddies}{fig:macroAndMicroEddy}
+
+Biggest turbulent eddies: \citep{Wollny2010Diss}
+
+\begin{align}
+    \Lambda \sim \frac{h}{2} %= \frac{d}{10}
+\end{align}
+
+This turbulent eddy breaks down in stages, until it becomes so small that its mechanical energy dissipates into heat. The smallest turbulent eddy is determined by the \textsc{Kolmogoroff}-scale:
+
+\begin{align}
+	\lambda = \left( \frac{\nu^3}{\epsilon} \right)^{0.25}
+\end{align}
+
+For the special case of fully formed turbulence (vollausgebildete Turbulenz), the so-called \textit{Tr\"gheitsunterbereich} divides the macroscale $\Lambda$ and the microscale $\lambda$. This means that the microscale of turbulence is better described with the \textit{Tr\"agheitsunterbereich} and the \textit{Dissipationsbereich}. This classification is based on the proportion of turbulent microscale $\lambda$ and the distance of two neighboring points around the eddy $\Delta{}r$. \todo{What does the distance of two neighboring points mean? Where are the points located?}
+
+\begin{itemize}
+	\item \textit{Tr\"agheitsunterbereich}: $25 \cdot \lambda < \Delta{r} < 0.1 \cdot \Lambda$
+	\item \textit{Dissipationsbereich}: $\Delta{r} < 6 \cdot \lambda$
+	\item \textit{\"Ubergangsbereich}: $6 \cdot \lambda < \Delta{r} < 25 \cdot \lambda$
+\end{itemize}
+
+This classification is valid for following macroscale to microscale quotient:
+
+\begin{itemize}
+	\item $\frac{\Lambda}{\lambda} \geqslant 150...200$ nach \textsc{Liepe}
+	\item $\frac{\Lambda}{\lambda} \geqslant 125...250$ nach \textsc{Henzler}
+\end{itemize}
+
+\paragraph{Energy Dissipation}
+As published in \textsc{Liepe, Shinnar}, the fluctuation of turbulent velocity can be derived from the theory of isotropic turbulence from \textsc{Kolmogoroff} in the \textit{Tr\"agheitsunterbereich}, so that:
+
+\begin{align}
+	{w'}^2 = 1.9 \cdot \left( \epsilon \cdot \Delta{r} \right)^{2/3} \\
+	\epsilon \propto \frac{{w'}^3}{\Delta{r}}
+\end{align}
+
+Whereas in the \textit{Dissipationsbereich}
+
+\begin{align}
+	{w'}^2 = \frac{\epsilon \cdot \Delta{r}^2}{15 \cdot \nu_c}
+\end{align}
+
+That means, in the Tr\"agheitsunterbereich
+
+\begin{align}
+	\overline{\epsilon} = \frac{P}{m} \propto \epsilon
+\end{align}
