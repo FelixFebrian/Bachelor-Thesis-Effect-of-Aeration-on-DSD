@@ -1,0 +1,64 @@
+\section{Evaluation of Mechanical Stress}
+
+\subsection{Direct Methods}
+
+The total surface area of the dispersed phase can be formulated as following:
+
+\begin{align}
+	A_d = \sum_i \pi \cdot d_{P,i}^2
+\end{align}
+
+This quantity relates closely with the total volume of the dispersed phase:
+
+\begin{align}
+	d_{32} = \frac{\sum d_P^3}{\sum d_P^2} = 6 \cdot \frac{V_d}{A_d}
+\end{align}
+
+
+
+
+\subsection{Expected Mechanism for Fluid Particle Breakup}
+
+\subsubsection{Experiment Water + Surfactant + Oil} \label{sec:expWaterSurfOil}
+\begin{itemize}
+	\item Turbulent kinetic energy of the particle greater than a critical value
+	\item Velocity fluctuation around the particle surface greater than a critical value
+	\item Turbulent kinetic energy of the hitting eddy greater than a critical value
+	\item Inertial Force of hitting eddy greater than the interfacial force of the smallest daughter particle
+	\item Combinations of above criteria
+\end{itemize}
+The turbulent kinetic energy, which in turn causes above criteria, is usually considered in the Energy Dissipation Model. The model states, that the mechanical energy in form of turbulent eddy will be converted into heat, as the turbulent eddy disappears after undergoing a cascade.
+
+This energy dissipation $\epsilon$ is then the main factor in determining the kinetic of particle breakup (here Oil Particle) and/or its terminal state:
+
+\begin{align}
+	d_{32} = f(\epsilon, t)
+\end{align}
+
+
+
+\subsubsection{Droplet breakup due to aeration \textsc{Biedermann, Henzler}}
+During aeration, there are four phenomenons that agitate the oil particle inside water continuous phase. These phenomenons appear for example in experiments in bubble column and consist of:
+\begin{itemize}
+	\item Formation of Bubbles in the gas distributor
+	\item Coalescence of two Bubbles
+	\item Agitation due to rising movement of the bubbles
+	\item Bubbles breakup on the water (liquid) surface
+\end{itemize}
+
+Again, the oil particle distribution is defined as a function of the energy dissipation, where the energy dissipation serves as a model for above processes:
+
+\begin{align}
+	d_{32} &= f(\epsilon, t) \\
+	\text{where} \qquad \qquad \epsilon &= A \cdot \frac{v_L^3}{d_L}
+\end{align}
+
+\textcolor{red}{How to compute the Power Input from Aeration, basically in Bubble Column?}
+
+\subsubsection{Experiment Water + Air} \label{sec:expWaterAir}
+In this experiment, the bubbles size distribution is collected for two different gas flow and five different impeller rotational speed. The mechanism of bubble breakup would be analogous to \nameref{sec:expWaterSurfOil}. Note that the coalescence of the air bubbles is not inhibited.
+
+\subsubsection{Experiment Water + Air + Surfactant}
+Analogous to \nameref{sec:expWaterAir} with the only difference of inhibition of coalescence.
+
+\subsubsection{•}
