@@ -1,0 +1,51 @@
+\chapter{Stuffs to be Discussed}
+
+\section{How do I evaluate the results}
+From \textsc{Wollny}: There are models which can be used to describe the particle size distribution in a water/oil-emulsion. One of this model is that the quotient of turbulent-movement-energy $E_{kin}$ to the surface energy $E_\sigma$ has to be smaller or equal to one, in other words $\frac{E_{kin}}{E_\sigma} \leqslant 1$.
+
+This model is then divided for 1) \textit{Tr\"agheitsunterbereich} ($d_P > 25 \cdot \lambda$):
+
+\begin{align}
+    d_{P, max} \propto d_{32} \propto \epsilon^{-2/5} \propto w_{tip}^{-6/5} \propto \text{We}^{-3/5}
+\end{align}
+
+and for 2) \textit{Dissipationsbereich} ($d_P < 6 \cdot \lambda$):
+
+\begin{align}
+    d_{P, max} \propto d_{32} \propto \epsilon^{-1/3} \propto w_{tip}^{-1} \propto \text{We}^{-1/2}
+\end{align}
+
+The \textsc{Kolmogoroff}-Microscale in this correlation is defined as $\lambda = \left( \frac{\nu^3}{\epsilon} \right)^{0.25}$, whereas the Weber-Number is formulated as
+
+\begin{align}
+    \text{We} = \frac{\rho_c \cdot n^2 \cdot d^3}{\gamma}
+\end{align}
+
+The local energy dissipation, which is needed for above correlations, is unknown. However, this quantity is proportional to the impeller's average energy dissipation
+
+\begin{align}
+    \epsilon \propto \overline{\epsilon} = \frac{\text{Ne} \cdot n^3 \cdot d^5}{V} = \frac{P}{m}
+\end{align}
+
+
+\section{My considerations so far}
+So, we decided on the following title for my BA: “Effect of Aeration on Droplet Size Distribution in a Stirred Tank Bioreactor Regarding Mechanical Stress”. There, I believe, we put the emphasis on droplet size distribution. We planned then overall on four different experiment blocks:
+
+\begin{enumerate}
+    \item Observation of Bubble size distribution in an aerated and stirred water. The resulting bubble size distribution depends on the power input from the stirrer and the correlation between these quantities will be tested with energy dissipation model, which means $d_{32} = f \left( \epsilon \right)$
+	\item Observation of Bubble size distribution in an aerated and stirred water + surfactant system. The difference between this experiment and the first experiment is that the coalescence process of the bubbles is inhibited.
+	\item Observation of Droplet size distribution in a stirred water + surfactant + oil system. Again, the effect of the stirrer on the particle distribution is modeled using the energy dissipation of turbulent flows and/or eddy.
+	\item Observation of Droplet and Bubble size distribution in an aerated and stirred water + surfactant + oil system. Here we would see the turbulent effect on the bubbles and droplets breakup, as well as the effect of bubbles breakup on the droplets breakup. In other words, power input in the form of energy dissipation comes both from the stirrer and the ascending bubbles.
+\end{enumerate}
+
+So far I have understood the constellation of these experiments as following:
+\begin{itemize}
+    \item Bubble size distribution results from experiment 1 and 2 serve as the basis for the stirrer hydromechanical effect on the bubbles, which in turn can be ‘subtracted’ from the effect on droplets in experiment 4 $\rightarrow$ Is that correct? Else I am not very sure, what is the point in doing experiment 1 and 2.
+	\item Comparison of the results from experiments 3 and 4 is then the main emphasis of my BA since we also put the stress on Droplet Size Distribution in the title.
+\end{itemize}
+
+That being said, I have the following questions:
+\begin{enumerate}
+    \item How do I compute the power input from bubble breakups? I tried to find it in the literature, but haven’t got a clear answer. Do you have any literature on this topic?
+	\item Since the power input in Experiment 4 comes from both stirrer and bubble breakups, doesn’t It also make sense to have an experiment where the energy dissipation only comes from bubble breakups? What I’m asking is, isn’t the experiment block “Observation of Droplet size distribution in an aerated water + surfactant + oil system” missing?
+\end{enumerate}
