@@ -1,10 +1,10 @@
 % ============= Document class & settings =============
 \documentclass[
-	a4paper, 
-	11pt, 
-	headlines=1.25, 
-	footlines=1.25, 
-	DIV = 12, 
+	a4paper,
+	11pt,
+	headlines=1.25,
+	footlines=1.25,
+	DIV = 12,
 	numbers = noenddot,
 	]{scrreprt}
 \linespread{1}                			% Zeilenabstand
@@ -19,9 +19,9 @@
     		%outer=2cm,
     		%inner=3cm,
 }
-%	BCOR = 0mm, 
-%	titlepage=firstiscover, 
-%	listof=totoc,  
+%	BCOR = 0mm,
+%	titlepage=firstiscover,
+%	listof=totoc,
 %	bibliography=totoc					% Lines were in document class before
 
 % Dokumentinformationen
@@ -29,21 +29,18 @@
 	pdftitle={Bachelor's Thesis},
 	pdfsubject={Analysis of Droplets Size Distribution in an Aerated Stirred Tank Reactor},
 	pdfauthor={Felix Febrian},
-	pdfkeywords={},	
+	pdfkeywords={},
 	hidelinks %Links nicht einrahmen
 ]{hyperref}
 
 % ============= Packages =============
 \usepackage[utf8]{inputenc}
-%\usepackage[T1]{fontenc}
-%\usepackage{lmodern}
 \usepackage[english]{babel}		    % Umlaute, usw.
 \usepackage{microtype}          			% besserer Schriftsatz
 \usepackage{csquotes}           			% für Wörter in "[Text]": \enquote{}
 \usepackage{amssymb}            			% ermöglicht mathematische Symbole
 \usepackage{amsthm}             			% ermöglicht mathematische Umgebungen
 \usepackage{amsmath}            			% ""
-%\usepackage{mathpazo}           			% Schriftart für Mathe
 \usepackage{amsfonts}
 \usepackage{graphicx}           			% ermöglicht Einbinden von Grafiken
 	\graphicspath{{pictures/}}  			% sagt graphicx wo die Grafiken liegen
@@ -64,7 +61,8 @@
 \usepackage{pdfpages}                       % Enables inserting pdf
 \usepackage{xfrac}                          % other fraction types
 \usepackage[Bjornstrup]{fncychap}           % Fancy Chapter Styles, Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
-\usepackage{nameref}
+\usepackage{nameref}                        % Enables referencing with name (like section name)
+\usepackage{longtable}                      % Enables multi-page table
 
 % ============= BibTex Options =============
 \usepackage[authoryear, round, sort]{natbib}		% Package for bibtex -- citation Test, et.al (2000)
@@ -72,6 +70,12 @@
 \usepackage{tocbibind}					            % List Bibliography in the Table of Contents
 
 % ============= Packages with renewed command (MACRO) ================
+\usepackage{array}
+    \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+    \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+    \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
 \usepackage[intoc]{nomencl}
 \makenomenclature
 \usepackage{etoolbox}
@@ -93,7 +97,7 @@
   		{\unskip\ignorespaces\setcounter{inlineenum}{0}%
    		\renewcommand{\item}{\refstepcounter{inlineenum}{\textit{\theinlineenum})~}}}
   		{\ignorespacesafterend}
-  		
+
 \usepackage{pgfplots}
   	\pgfplotsset{compat=newest}
   	\usetikzlibrary{plotmarks}
@@ -103,7 +107,7 @@
 	\pgfplotsset{plot coordinates/math parser=false}
 \newlength\figH
 \newlength\figW
-\setlength{\figH}{10cm} % Hier kann die Größe der Plots gesetzt werden. default: 7 
+\setlength{\figH}{10cm} % Hier kann die Größe der Plots gesetzt werden. default: 7
 \setlength{\figW}{13.33333cm} % Breite = 4/3*Höhe. default: 9.33333
 
 % MAKRO pgfplot picture, #1 : .tex data, #2 : caption, #3 : Label
@@ -115,7 +119,7 @@
         \caption{#2}
         \label{#3}
     \end{figure}}
-    
+
 % Inserting pdf as figure
 \newcommand{\vectorGraphic}[3]{
     \begin{figure}[htbp]
@@ -124,5 +128,5 @@
         \caption{#2}
         \label{#3}
     \end{figure}}
-    
-%\renewcommand\thechapter{Chapter \arabic{chapter}}   
+
+%\renewcommand\thechapter{Chapter \arabic{chapter}}
