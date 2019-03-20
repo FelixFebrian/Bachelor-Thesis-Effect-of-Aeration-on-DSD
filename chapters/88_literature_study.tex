@@ -1,0 +1,132 @@
+\chapter{Literature Study}
+
+\section{General}
+\begin{centering}
+ 	\centering
+	\begin{longtable}{R{6cm}L{7cm}C{3cm}}
+    	\toprule
+		Descriptions		&	Equations	&	Literature \\
+		\midrule
+        \endhead
+
+        \hline \multicolumn{3}{r}{{Continued on next page}} \\
+        \bottomrule
+        \endfoot
+
+        \bottomrule
+        \endlastfoot
+
+        Turbulence velocity &   $w_{turb} = \overline{w} + w'$  &   \citep{nienow1998hydrodynamics} \\
+
+    \end{longtable}
+\end{centering}
+
+
+\section{Shinnar Shear-Stress Model}
+\begin{centering}
+ 	\centering
+	\begin{longtable}{R{6cm}L{7cm}C{3cm}}
+    	\toprule
+		Descriptions		&	Equations	&	Literature \\
+		\midrule
+        \endhead
+
+        \hline \multicolumn{3}{r}{{Continued on next page}} \\
+        \bottomrule
+        \endfoot
+
+        \bottomrule
+        \endlastfoot
+
+        Assumption for stabile droplets &   $\frac{E_\text{kin}}{E_\sigma} \leqslant 1$ & \\
+        Interfacial energy  &   $E_\sigma = \sigma \cdot A_P = \sigma \cdot \pi \cdot d_P^2$  & \\
+        Turbulent specific kinetic energy   &   $\frac{E_\text{kin}}{V} = \rho_c \cdot k = \frac{3}{2} \cdot \rho_c \cdot w$    & \\
+        Assumption: eddy volume is similar to droplet volume    &   $E_\text{kin} = \frac{\pi}{4} \cdot \rho_c \cdot w'^2 \cdot d_P^3$  & \\
+        Turbulent Weber-Number  &   $\frac{E_\text{kin}}{E_\sigma} = 1 = \frac{\rho_c \cdot w'^2}{4 \cdot \sigma} d_{P, \text{max}} = \text{We}_\text{turb}$    & \\
+        Apply Reynold-Shear-stress  &   $\tau_{\text{turb}} = \rho \cdot \overline{w'}^2 = \frac{4 \cdot \sigma}{d_{P, \text{max}}}$    & \\
+        Assumption: the distant between two neighboring points corresponds to droplet diameter  &   Tr\"agheitsunterbereich: $d_{P, \text{max}} = 0.64 \cdot \left( \frac{\sigma}{\rho_c} \right)^{3/5} \cdot \varepsilon^{-2/5}$    & \\
+        &   Dissipationsbereich: $d_{P, \text{max}} = 3.91 \cdot \left( \frac{\nu_c \cdot \sigma}{\rho_c} \right)^{1/3} \cdot \varepsilon^{-1/3}$   & \\
+
+
+    \end{longtable}
+\end{centering}
+
+
+\section{Agitated vessel}
+\begin{centering}
+	\begin{longtable}{R{6cm}L{7cm}C{3cm}}
+    	\toprule
+		Descriptions		&	Equations	&	Literature \\
+		\midrule
+        \endhead
+
+        \hline \multicolumn{3}{r}{{Continued on next page}} \\
+        \bottomrule
+        \endfoot
+
+        \bottomrule
+        \endlastfoot
+
+		Microturbulence scale   &   $\lambda = \left( \frac{\nu^3}{\varepsilon} \right)^{1/4}$  &   \citep{Kolmogorov} \\
+		Reynold Shear-Stress    &   $\tau_{\text{turb}} = \rho \cdot \overline{w'}^2$  &   \citep{langer2000verstandnis} \\
+		Local energy dissipation    &   $\varepsilon_{\text{loc}} \propto \frac{\overline{w'}^3}{d}$    &   \citep{langer2000verstandnis} \\
+		Mean energy dissipation rate     &   $\overline{\varepsilon} = \frac{P}{\rho \cdot V}$  &   \citep{Wollny2010Diss} \citep{nienow1998hydrodynamics} \\
+		Maximal energy dissipation through LDA  &  $\frac{\varepsilon_{\text{max}}}{\overline{\varepsilon}} = 0.14 \cdot C \cdot \text{Ne}^{\frac{1}{3}} \frac{H/D}{(d/D)^3}$    &    \citep{langer2000verstandnis} \\
+        Ratio of maximal energy dissipation rate to its mean value   &   $\frac{\varepsilon_{\text{max}}}{\overline{\varepsilon}} \propto \text{Ne}^{1/3}$  &   \citep{nienow1998hydrodynamics}
+
+
+    \end{longtable}%
+\end{centering}
+
+
+\section{Aerated agitated vessel}
+\begin{centering}
+	\begin{longtable}{R{6cm}L{7cm}C{3cm}}
+    	\toprule
+		Descriptions		&	Equations	&	Literature \\
+		\midrule
+        \endhead
+
+        \hline \multicolumn{3}{r}{{Continued on next page}} \\
+        \bottomrule
+        \endfoot
+
+        \bottomrule
+        \endlastfoot
+
+
+		Flooding/Loading correlation	&	$\text{Fl}_{\text{F}} = 30 \cdot \text{Fr}_\text{F} \left( \frac{d}{D} \right)^{3.5}$ or $\text{Fl}_{\text{G, F}} = 1.2 \text{Fr}_\text{F}$   &   \citep{babalona2008interrelation} \\
+        Loading/Complete Dispersion correlation &   $\text{Fl}_\text{CD} = 0.2 \text{Fr}_\text{CD}^0.5 \left( \frac{d}{D} \right)^{0.5}$  &   \citep{babalona2008interrelation} \\
+        Complete Dispersion and Flooding correlation    &   $\text{Fr}_\text{CD} = 1.2 \text{Fr}_\text{F}$  &   \citep{babalona2008interrelation} \\
+		Mass transfer coeff is not affected by impeller type	&	$k_La \neq f(\text{Impeller geometry})$	& \citep{nienow1996gas} \\
+        Effect of liquid viscosity to Mass transfer &   $\eta \propto \frac{1}{k_L}$ and $\eta \propto \frac{1}{k_La}$  &   \citep{kadic2010mixing} \\
+        Typical value for aeration rate for bacterial or mycelial fermentations &   0.5 -- 1.5 vvm  &   \citep{nienow1998hydrodynamics} \\
+        Typical value for aeration rate for animal cells &   0.01 vvm  &   \citep{nienow1998hydrodynamics} \\
+        Definitions: Superficial air velocity   &   $v_s = \frac{4 \cdot \dot{V}_\text{G}}{\pi \cdot D^2}$  &   \citep{nienow1998hydrodynamics} \\
+        Definitions: Gas flow / Aeration number &   $\text{Fl}_\text{G} = \frac{\dot{V}_\text{G}}{N \cdot D^3}$ &   \citep{nienow1998hydrodynamics} \\
+
+    \end{longtable}%
+\end{centering}%}%
+
+
+\section{Bubble columns}
+\begin{centering}
+	\begin{longtable}{R{6cm}L{7cm}C{3cm}}
+    	\toprule
+		Descriptions		&	Equations	&	Literature \\
+		\midrule
+        \endhead
+
+        \hline \multicolumn{3}{r}{{Continued on next page}} \\
+        \bottomrule
+        \endfoot
+
+        \bottomrule
+        \endlastfoot
+
+
+		Mass-transfer coeff in bubble columns	&	$k_La \propto \left( \frac{P}{V} \right)^{0.7}$	&	\citep{nienow2000aeration} \\
+		Volume specific power input of bubble columns		&	$\frac{P}{V} \propto \rho g w_s$ with $w_s = \frac{4\dot{V}_G}{\pi D^2}$	&	\citep{nienow2000aeration} \\
+
+        \end{longtable}%
+\end{centering}%
