@@ -1,11 +1,40 @@
 \chapter{Introduction} \label{ch:introduction}
 
 \section{Motivation}
-The definition of a bioreactor sums up an artificially constructed space where biological reactions are carried out. Hence it should constitute the original ecosystem which provides an ideal environment for the partaking organisms, generally microscopic ones, as thoroughly and sufficiently as possible. This raises several issues regarding life sustainability of the microorganisms in the designed space, for instance mixing efficiency and nutrients supply.
+The definition of a bioreactor sums up an artificially constructed space where biological reactions are carried out. Hence it should constitute the original ecosystem which provides an ideal environment for the partaking organisms, generally microscopic ones, as thoroughly and sufficiently as possible.
+
+Much efforts have been devoted to this cause and over the years researchers have come up with a number of bioreactor design ideas and also carried out investigations regarding its physical parameters. \citet{mandenius2016challenges} described some bioreactor designs, amongst others \begin{inlineenum}
+    \item stirred-tank reactor,
+    \item bubble column,
+    \item airlift reactor, and
+    \item wave bioreactor.
+\end{inlineenum} These designs possess its own advantages and disadvantages. However, the predominantly used design for submerged culture, with a few exceptions, is the stirred tank bioreactor, which is also the main subject of this work. In spite of its drawback in form of mechanical agitation, the stirred tank is widely chosen due to its versatility, operability and manufacturability. Scale-up processes of a stirred tank has been extensively reviewed as well.
+
+The overall performance of a stirred-tank to sustain a biological system is then determined by two sets of associated properties as outlined by \citet{nienow1998hydrodynamics}. These features are listed in Table \ref{tab:1_bioreactor_parameters}.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{R{6.5cm}|L{6.5cm}}
+        \toprule
+        System-independent physical parameters  & System-specific biological parameters \\
+        \hline
+        Fluid dynamics                     & Growth and product secretion \\
+        Bulk fluid and gas phase mixing    & Damage to micro-organisms \\
+        Power drawn                        & Morphology changes \\
+        Air dispersion capability          & Nutrient demand including \ch{O2} \\
+        Oxygen mass transfer coefficient   & \ch{O2} and \ch{CO2} transfer rates \\
+        Heat transfer                      & \\
+        \bottomrule
+    \end{tabular} %
+    \caption{Stirred bioreactor parameters according to \citet{nienow1998hydrodynamics}}
+    \label{tab:1_bioreactor_parameters}
+\end{table}
+
+This raises several issues regarding life sustainability of the microorganisms in the designed space, for instance mixing efficiency and nutrients supply.
 
 Mixing efficiency can often be intensified through an impeller application as in a stirred-tank bioreactor, which also will be the main subject of this work. However, the stress caused by impeller's stirring-force may hinder the efficiency of the underlying process. Numerous studies contributed to indicate this problem not only in biotechnological, but also in the broader chemical industry. For example, \citet{Frahm2007} and \citet{Henzler1993} addressed animal cell's susceptibility to shear-stress due to the lack of cell walls, that its oxygen supply is limited to bubble-free membrane aeration. Even the more robust plant cell suspension is adversely affected by hydrodynamic-related stress \citep{Eibl2009}. To mention a purely chemical system, \citet{Wollny2010Diss} stated the danger of excessive energy input in the crystallization process to achieve the desired crystal size distribution.
 
-Nutrients demand for aerobic cell cultures includes oxygen requirement conducive to cellular respiration. There are several oxygenation methods to fulfill this demand, the main ones being: 
+Nutrients demand for aerobic cell cultures includes oxygen requirement conducive to cellular respiration. There are several oxygenation methods to fulfill this demand, the main ones being:
 \begin{inlineenum}
     \item surface aeration,
     \item membrane aeration and
@@ -14,6 +43,6 @@ Nutrients demand for aerobic cell cultures includes oxygen requirement conducive
 While the surface and membrane aeration method produce little mechanical stress, the direct bubble aeration has its advantage in terms of higher gas/liquid-mass transfer and possible oxygen supply rate \citep{Henzler1993}.
 
 An equilibrium of aeration, mixing performance and the therewith induced stress must therefore be attained and has been one of central issue in bioreactor design criteria. While many investigations on impeller induced particle stress have been done, among others by \citet{Wollny2010Diss} and \citet{Malik2018Master}, this work tries to extend the research scope by taking account of bubble aeration. It's objective is to explore the effect of bubble aeration on particle stress in stirred-tank bioreactor.
- 
+
 
 \section{Outline}

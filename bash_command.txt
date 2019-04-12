@@ -1,0 +1,2 @@
+pdflatex -output-directory build main_for_preliminary_text.tex
+pdflatex -output-directory build main.tex

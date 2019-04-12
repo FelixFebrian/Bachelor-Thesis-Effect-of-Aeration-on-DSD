@@ -1,0 +1,6 @@
+site_name: User Documentations FastRCNN FG VT
+use_directory_urls: false
+nav:
+- Home: "index.md"
+- User Guide:
+    - 'Training FastRCNN_circle': 'TrainFastRCNN_circle.md'

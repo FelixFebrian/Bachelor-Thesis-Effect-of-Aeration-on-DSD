@@ -1,0 +1,55 @@
+C:/caffee/annos
+
+1. Daten sortieren
+2. Convert Image J to BB Circle -- Using convert_imageJ_annos_to_BB_cirle_defs.m
+        --> Change Input dir, output dir, Image type 'bmp', and Class names 'B, T'
+        --> Also check Fiji/ImageJ version - path name
+3. gui_check_circle_annos.m --> gerade erstellte Ordner oeffen um korrekte konvertierung zu gui_check_circle_annos
+
+4. Visual Studio --> create VOC training data struct from annos BB
+        Open project --> create VOC training data struct from annos BB
+        rechts klick Python Environment -> Add/Remove Python Environment
+        Miniconda2 auswaehlen
+        Click on Py.Data
+        To change: annoDir, resultDir, scales, fractionOf
+        what you can change, everythin under user options
+        From trainval.txt to test.txt, sort representative and all kind of images
+
+5. Creating link
+        Create DNNs/dev/.../data
+        Create VOCdevkit0020_folder name "imdbSubSetNames"
+        Create Subfolder "results\VOC0020\Main"
+
+        Open cmd as administrator --> cd to target folder
+        mklink /d VOC0020 source_path_name
+
+5.b. open python_tools
+        check conda environment list
+        activate py36
+        open C:\DNNs\dev\DNNs_python_tools\inputDataFromVocFolders.py
+        change rootVOCFolder and fasterRCNNDataFolder
+        python inputDataFromVocFolders.py
+
+6. Visual Studio --> perform_net_training.sln
+        Open project --> create VOC training data struct from annos BB
+        rechts klick Python Environment -> Add/Remove Python Environment
+        Miniconda2 auswaehlen
+        Click on Py.Data --> perform_net_training.py
+
+        showScores = False / # True
+        In the solver.prototxt
+            to change: base_lr,. gamma, stepsize
+        Initial Weight using orig.caffemodel
+        Move or delete Old Voc data from output folder
+        YML-Data for configuration
+        PerformTesting on test (also possible with trainval)
+        Change imdbSubSetNames to folder name after "VOC0020_"
+
+        YML Data copy path from python file
+            Important: Scales: Aufloesung
+                        Region Proposal Net
+                        RPN_PRE_ hochschrauben
+                        PIXEL_MEAN: [55, 55, 55]
+                        CONF_THRESH: 0.8
+        Config.py
+            Important:

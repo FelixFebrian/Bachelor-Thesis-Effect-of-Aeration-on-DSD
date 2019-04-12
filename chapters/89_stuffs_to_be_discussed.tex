@@ -1,38 +1,31 @@
 \chapter{Stuffs to be Discussed}
 
+\section{What is the main objective of the work?}
+
 \section{How do I evaluate the results}
-From \textsc{Wollny}: There are models which can be used to describe the particle size distribution in a water/oil-emulsion. One of this model is that the quotient of turbulent-movement-energy $E_{kin}$ to the surface energy $E_\sigma$ has to be smaller or equal to one, in other words $\frac{E_{kin}}{E_\sigma} \leqslant 1$.
-
-This model is then divided for 1) \textit{Tr\"agheitsunterbereich} ($d_P > 25 \cdot \lambda$):
-
+From the water + oil + surfactant block, we already had some results. This is how I evaluate this result: From \textsc{Wollny}: There are models which can be used to describe the particle size distribution in a water/oil-emulsion. One of this model is that the quotient of turbulent-movement-energy $E_{kin}$ to the surface energy $E_\sigma$ has to be smaller or equal to one, in other words $\frac{E_{kin}}{E_\sigma} \leqslant 1$. This model is then divided for 1) \textit{Tr\"agheitsunterbereich} ($d_P > 25 \cdot \lambda$):
 \begin{align}
     d_{P, max} \propto d_{32} \propto \epsilon^{-2/5} \propto w_{tip}^{-6/5} \propto \text{We}^{-3/5}
 \end{align}
-
 and for 2) \textit{Dissipationsbereich} ($d_P < 6 \cdot \lambda$):
-
 \begin{align}
     d_{P, max} \propto d_{32} \propto \epsilon^{-1/3} \propto w_{tip}^{-1} \propto \text{We}^{-1/2}
 \end{align}
-
 The \textsc{Kolmogoroff}-Microscale in this correlation is defined as $\lambda = \left( \frac{\nu^3}{\epsilon} \right)^{0.25}$, whereas the Weber-Number is formulated as
-
 \begin{align}
-    \text{We} = \frac{\rho_c \cdot n^2 \cdot d^3}{\gamma}
+    \text{We} = \frac{\rho_c \cdot n^2 \cdot d^3}{\sigma}
 \end{align}
-
 The local energy dissipation, which is needed for above correlations, is unknown. However, this quantity is proportional to the impeller's average energy dissipation
-
 \begin{align}
     \epsilon \propto \overline{\epsilon} = \frac{\text{Ne} \cdot n^3 \cdot d^5}{V} = \frac{P}{m}
 \end{align}
-
+Basically, I should evaluate the result by making the logarithmic graph of the measured sauter-mean diameter to the mean dissipation rate (mass specific power input) -- Is that correct?
 
 \section{My considerations so far}
 So, we decided on the following title for my BA: “Effect of Aeration on Droplet Size Distribution in a Stirred Tank Bioreactor Regarding Mechanical Stress”. There, I believe, we put the emphasis on droplet size distribution. We planned then overall on four different experiment blocks:
 
 \begin{enumerate}
-    \item Observation of Bubble size distribution in an aerated and stirred water. The resulting bubble size distribution depends on the power input from the stirrer and the correlation between these quantities will be tested with energy dissipation model, which means $d_{32} = f \left( \epsilon \right)$
+  \item Observation of Bubble size distribution in an aerated and stirred water. The resulting bubble size distribution depends on the power input from the stirrer and the correlation between these quantities will be tested with energy dissipation model, which means $d_{32} = f \left( \epsilon \right)$
 	\item Observation of Bubble size distribution in an aerated and stirred water + surfactant system. The difference between this experiment and the first experiment is that the coalescence process of the bubbles is inhibited.
 	\item Observation of Droplet size distribution in a stirred water + surfactant + oil system. Again, the effect of the stirrer on the particle distribution is modeled using the energy dissipation of turbulent flows and/or eddy.
 	\item Observation of Droplet and Bubble size distribution in an aerated and stirred water + surfactant + oil system. Here we would see the turbulent effect on the bubbles and droplets breakup, as well as the effect of bubbles breakup on the droplets breakup. In other words, power input in the form of energy dissipation comes both from the stirrer and the ascending bubbles.
@@ -40,12 +33,68 @@ So, we decided on the following title for my BA: “Effect of Aeration on Drople
 
 So far I have understood the constellation of these experiments as following:
 \begin{itemize}
-    \item Bubble size distribution results from experiment 1 and 2 serve as the basis for the stirrer hydromechanical effect on the bubbles, which in turn can be ‘subtracted’ from the effect on droplets in experiment 4 $\rightarrow$ Is that correct? Else I am not very sure, what is the point in doing experiment 1 and 2.
+  \item Bubble size distribution results from experiment 1 and 2 serve as the basis for the stirrer hydromechanical effect on the bubbles, which in turn can be ‘subtracted’ from the effect on droplets in experiment 4 $\rightarrow$ Is that correct? Else I am not very sure, what is the point in doing experiment 1 and 2. In other words, I want to see how:
+
+  \begin{align}
+    d_{32, \text{B}} \propto \varepsilon_G^n, \qquad \text{How much is n?} \\
+    \text{Hypothesis -- Shinnar-Model:} \qquad d_{32, \text{B}} \propto \varepsilon_G^{-1/3} \qquad d_{32, \text{D}} \propto \varepsilon_G^{-1/3} \\
+  \end{align}
+  This proportionality shouldn't changed in aerated agitated vessel.
 	\item Comparison of the results from experiments 3 and 4 is then the main emphasis of my BA since we also put the stress on Droplet Size Distribution in the title.
 \end{itemize}
 
+Moreover, research shows that the power draw of agitater in aerated system is smaller than in the non-aerated system ($~0.4 \leqslant \frac{P_G}{P_U} \leqslant 1$). The arising question is, if the mean energy dissipation rate can be calculated as $\varepsilon_G = \frac{P_G}{m}$. This would be needed to create the shear-stress model from Shinnar.
+
+So, the main objective of the work is to find the correlation of sauter-mean diameter of droplets and bubbles particle in an aerated stirred-tank, where the system of Water + Oil + Air has not been investigated much yet.
+
 That being said, I have the following questions:
 \begin{enumerate}
-    \item How do I compute the power input from bubble breakups? I tried to find it in the literature, but haven’t got a clear answer. Do you have any literature on this topic?
-	\item Since the power input in Experiment 4 comes from both stirrer and bubble breakups, doesn’t It also make sense to have an experiment where the energy dissipation only comes from bubble breakups? What I’m asking is, isn’t the experiment block “Observation of Droplet size distribution in an aerated water + surfactant + oil system” missing?
+  \item Is my thinking and considerations acceptable? Meaning, the objective being to test Shinnar-Model on Water + Oil + Air System.
+  \item Is it really necessary to test water + air and stirred? We only test water + oil with surfactant and not without.
+  \item Another consideration is that the power draw from the agitator is not the only factor that affects energy dissipation, which in turn affects the sauter-mean diameter of droplet. Ascencion velocity of the bubble could also partake in causing turbulent velocity, which results in energy dissipation. So, would it make sense to study this effect to, by studying Water + Oil + Air but without stirring? If yes, how do I compute the power input from bubble ascencion? I tried to find it in the literature, but haven’t got a clear answer. Do you have any literature on this topic?
+  \item On also related topic: why do we need to make the difference between \textit{Trägheitsunterbereich} and \textit{Dissipationsbereich}?
+  \item How is the setting to measure power input? (The viscosimeter?)
 \end{enumerate}
+
+
+\section{Plan for peripheral measurements}
+\subsection{Density measurements}
+\begin{itemize}
+  \item Density of Water
+  \item Density of Water + surfactant
+  \item Density of EAL Oil
+\end{itemize}
+
+\subsection{Viscosity measurements}
+\begin{itemize}
+  \item Viscosity of water
+  \item Viscosity of Water + surfactant
+  \item Viscosity of EAL Oil
+\end{itemize}
+
+\subsection{Surface tension measurements}
+\begin{itemize}
+  \item Water against Air
+  \item Water + Surfactant against Air
+  \item Water + Surfactant against Oil
+\end{itemize}
+
+\subsection{CMC for Triton X-100}
+Can I use the result from Alexander Malik and Wollny? Since their works were carried out in the same institute, means, the same equipment and same chemicals (probably)
+
+\section{Title -- \textit{Draft}}
+\begin{itemize}
+    \item Effect of Aeration on Droplet Size Distribution in a Stirred Tank Reactor Regarding Mechanical Stress
+    \item Effect of Aeration on Droplet Size Distribution in a Coalescence-Inhibited Stirred Tank Reactor Regarding Mechanical Stress
+    \item Study of Hydromechanical Stress through Droplet Size Distribution Analysis in an Aerated, Coalescence-Inhibited and Stirred Tank Reactor
+\end{itemize}
+
+
+\section{Miscellaneous}
+Other important points are about the procedure of the work. What I still don't know and I think I need to know so that I can work independently are the following:
+
+\begin{itemize}
+    \item How to do RGB-Convert
+    \item How to start trainin for CNN-Model
+    \item More Harddrive to do more experiments!!!
+\end{itemize}
